@@ -5,6 +5,14 @@ let VERSION = 0.2
 
 console.log(NAME + ' - ' + VERSION)
 
+function goService(service) {
+  window.open(service, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+}
+
+function pop(message) {
+  alert(message)
+}
+
 tt.setProductInfo(NAME, VERSION);
 let map = tt.map({
   key: 'Ca3iWIxE2ZiRJXxagZsreVRhws0cXphE',
@@ -25,7 +33,7 @@ let trafficIncidentsConfig = {
   incidentTitles: true
 }
 
-map.on('load', function() {
+map.on('load', function () {
   map.addTier(new tt.TrafficFlowTilesTier(trafficLayerConfig))
   map.addTier(new tt.TrafficIncidentTier(trafficIncidentsConfig))
 })

@@ -6,10 +6,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Maeve Meyers">
+    <meta name="description" content="Know Your Location is a good map that tells you where you are if you are lost">
+    <meta property="og:title" content="Know Your Location" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://127.0.0.1:5500/" />
+    <meta property="og:description"
+        content="Know Your Location is a good map that tells you where you are if you are lost" />
+    <meta name="theme-color" content="#00d1b2">
     <title>Know Your Location</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.64.0/maps/maps.css'>
     <link rel="stylesheet" href="./resources/styles/style.css">
+    <link rel="icon" type="image/png" href="./resources/images/brand/favicon.png" />
 </head>
 
 <body>
@@ -34,16 +43,25 @@
         <!-- Know Your Location MAP -->
         <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.64.0/maps/maps-web.min.js'></script>
         <script src="./resources/javascript/MAP_knowyourlocation.js"></script>
+        <link rel="shortcut icon" href="./resources/images/brand/favicon.ico" type="image/x-icon">
     </section>
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                <strong>Know Your Location</strong> by <a href="https://mystria.fr">Maeve Meyers</a>. The source code is
+                <img src="./resources/images/brand/favicon.png" alt="Know Your Location" width="1.5%"
+                    height="1.5%" onMouseDown="pop('Thank to GraphicSprings.com for this letter based logo')"><strong>Know Your Location</strong> by <a href="https://mystria.fr">Maeve Meyers</a>.
+                The source code is
                 licensed
                 <a href="./resources/text/LICENSE.txt">GNU GENERAL PUBLIC LICENSE VERSION 3</a>.
             </p>
-            <div class="hover">
-                <figure><img src="./resources/images/github.png" alt="GitHub" width="10%" height="10%"></figure>
+            <div class="services">
+                <figure>
+                    <img src="./resources/images/services/tomtom.png" alt="TomTom" width="10%" height="10%"
+                        onMouseDown="goService('https://tomtom.com/')">
+                    <img src="./resources/images/services/github.png" alt="GitHub" width="10%" height="10%"
+                        onMouseDown="goService('https://github.com/')">
+                </figure>
+
             </div>
         </div>
     </footer>
