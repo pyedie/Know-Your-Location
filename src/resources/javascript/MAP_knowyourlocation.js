@@ -40,3 +40,12 @@ map.on('load', function () {
 
 let marker = new tt.Marker().setLngLat([-122.478468, 37.769167]).addTo(map)
 marker.setPopup(new tt.Popup().setHTML('You are ICI'))
+
+let test = map.addControl(new tt.GeolocateControl({
+  positionOptions: {
+      enableHighAccuracy: true,
+      showUserLocation: true
+  },
+  trackUserLocation: true,
+  showUserLocation: true
+}));
